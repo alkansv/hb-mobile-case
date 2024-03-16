@@ -1,0 +1,8 @@
+{
+  "environments": {
+    "production": {
+      "email": "testsevgitest@gmail.com",
+      "password": "Test1234."
+    }
+  }
+}
