@@ -3,8 +3,6 @@ package com.hepsiburada.pages.loginpage;
 import com.hepsiburada.base.BaseTest;
 import com.hepsiburada.base.ConfigHandler;
 import com.hepsiburada.selectors.loginpageselectors.LoginPageSelectors;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 
 import static com.hepsiburada.pages.basepage.BasePage.*;
 
@@ -12,10 +10,6 @@ import static com.hepsiburada.pages.basepage.BasePage.*;
 public class LoginPage extends BaseTest {
 
     private final LoginPageSelectors loginPageSelectors = new LoginPageSelectors(appiumDriver);
-
-    public LoginPage(WebDriver appiumDriver) {
-        PageFactory.initElements(appiumDriver, this);
-    }
 
     private static final ConfigHandler configReader = new ConfigHandler();
 
@@ -51,7 +45,7 @@ public class LoginPage extends BaseTest {
     }
 
     public void setLoginEmailPasswordVersionTwo(String email, String password) {
-        waitBySeconds(10);
+        waitBySeconds(5);
         if (email.equals("config") && password.equals("config")) {
             email = configEmail;
             password = configPassword;
@@ -59,7 +53,7 @@ public class LoginPage extends BaseTest {
 
         setText(loginPageSelectors.txtLoginEmailVersionTwo, 10, email);
         clickLoginButtonVersionTwo();
-        waitBySeconds(10);
+        waitBySeconds(5);
         setText(loginPageSelectors.txtLoginPasswordVersionTwo, 10, password);
         clickLoginButtonVersionTwo();
     }

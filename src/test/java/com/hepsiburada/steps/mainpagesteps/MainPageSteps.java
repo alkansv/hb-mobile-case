@@ -5,7 +5,7 @@ import com.hepsiburada.pages.mainPage.MainPage;
 import com.thoughtworks.gauge.Step;
 
 public class MainPageSteps extends BaseTest {
-    private final MainPage mainPage = new MainPage(appiumDriver);
+    private final MainPage mainPage = new MainPage();
 
     @Step("Click My Account button")
     public void clickMyAccountStep() {

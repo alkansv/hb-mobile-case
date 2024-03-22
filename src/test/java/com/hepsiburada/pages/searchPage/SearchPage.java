@@ -3,8 +3,6 @@ package com.hepsiburada.pages.searchPage;
 import com.hepsiburada.base.BaseTest;
 import com.hepsiburada.pages.basepage.BasePage;
 import com.hepsiburada.selectors.searchpageselectors.SearchPageSelectors;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 
 import static com.hepsiburada.pages.basepage.BasePage.*;
 
@@ -13,11 +11,7 @@ public class SearchPage extends BaseTest {
 
     private final SearchPageSelectors searchPageSelectors = new SearchPageSelectors(appiumDriver);
 
-    private final BasePage basePage = new BasePage(appiumDriver);
-
-    public SearchPage(WebDriver appiumDriver) {
-        PageFactory.initElements(appiumDriver, this);
-    }
+    private final BasePage basePage = new BasePage();
 
     public void clickFilterButton() {
         clickOn(searchPageSelectors.btnSearchFilter, 10);
@@ -45,8 +39,8 @@ public class SearchPage extends BaseTest {
 
     public void selectRandomProduct() {
         waitBySeconds(3);
-        findElementWait(searchPageSelectors.listSearch.get(0), 10);
+        findElementWait(searchPageSelectors.listSearch.get(0), 5);
         int productNumber = basePage.randomNumber(1, 5);
-        clickOn(searchPageSelectors.listSearch.get(productNumber), 10);
+        clickOn(searchPageSelectors.listSearch.get(productNumber), 5);
     }
 }

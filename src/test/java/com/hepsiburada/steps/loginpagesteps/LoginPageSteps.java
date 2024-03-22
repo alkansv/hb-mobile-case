@@ -7,8 +7,8 @@ import com.thoughtworks.gauge.Step;
 import org.openqa.selenium.By;
 
 public class LoginPageSteps extends BaseTest {
-    private final LoginPage loginPage = new LoginPage(appiumDriver);
-    private final BasePage basePage = new BasePage(appiumDriver);
+    private final LoginPage loginPage = new LoginPage();
+    private final BasePage basePage = new BasePage();
 
     @Step("Login with <email> and <password>")
     public void setLoginEmailPasswordStep(String email, String password) {

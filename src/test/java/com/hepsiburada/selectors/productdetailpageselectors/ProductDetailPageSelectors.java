@@ -6,11 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProductDetailPageSelectors {
-
-    WebDriver appiumDriver;
-
     public ProductDetailPageSelectors(WebDriver appiumDriver) {
-        this.appiumDriver = appiumDriver;
         PageFactory.initElements(appiumDriver, this);
     }
 

@@ -9,10 +9,7 @@ import java.util.List;
 
 public class SearchPageSelectors {
 
-    WebDriver appiumDriver;
-
     public SearchPageSelectors(WebDriver appiumDriver) {
-        this.appiumDriver = appiumDriver;
         PageFactory.initElements(appiumDriver, this);
     }
 

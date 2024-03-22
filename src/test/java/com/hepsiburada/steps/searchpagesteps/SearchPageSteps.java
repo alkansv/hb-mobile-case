@@ -5,7 +5,7 @@ import com.hepsiburada.pages.searchPage.SearchPage;
 import com.thoughtworks.gauge.Step;
 
 public class SearchPageSteps extends BaseTest {
-    private final SearchPage searchPage = new SearchPage(appiumDriver);
+    private final SearchPage searchPage = new SearchPage();
 
     @Step("Click Filter button")
     public void clickFilterButtonStep() {

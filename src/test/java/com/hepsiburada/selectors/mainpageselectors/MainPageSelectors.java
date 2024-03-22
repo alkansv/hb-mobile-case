@@ -7,10 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainPageSelectors {
 
-    WebDriver appiumDriver;
-
     public MainPageSelectors(WebDriver appiumDriver) {
-        this.appiumDriver = appiumDriver;
         PageFactory.initElements(appiumDriver, this);
     }
 
@@ -22,6 +19,6 @@ public class MainPageSelectors {
     public WebElement btnMainAllCategories;
     @FindBy(xpath = "//*[@resource-id=\"com.pozitron.hepsiburada:id/etSearchBox\"]")
     public WebElement txtMainSearchBox;
-    @FindBy(xpath = "(//*[@resource-id=\"com.pozitron.hepsiburada:id/search_suggestion\"])[1]")
+    @FindBy(xpath = "(//*[@resource-id=\"com.pozitron.hepsiburada:id/search_suggestion\"])[2]")
     public WebElement btnMainSearchListFirstLine;
 }

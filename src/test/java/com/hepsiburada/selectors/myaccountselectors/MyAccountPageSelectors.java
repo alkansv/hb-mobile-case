@@ -7,10 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MyAccountPageSelectors {
 
-    WebDriver appiumDriver;
-
     public MyAccountPageSelectors(WebDriver appiumDriver) {
-        this.appiumDriver = appiumDriver;
         PageFactory.initElements(appiumDriver, this);
     }
 

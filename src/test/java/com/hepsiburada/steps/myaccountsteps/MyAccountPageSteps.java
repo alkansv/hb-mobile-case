@@ -5,7 +5,7 @@ import com.hepsiburada.pages.myaccountpage.MyAccountPage;
 import com.thoughtworks.gauge.Step;
 
 public class MyAccountPageSteps extends BaseTest {
-    private final MyAccountPage myAccountPage = new MyAccountPage(appiumDriver);
+    private final MyAccountPage myAccountPage = new MyAccountPage();
 
     @Step("Check that the My Account page appears")
     public void checkVisibilityMyOrdersButtonStep() {

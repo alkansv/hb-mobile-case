@@ -4,19 +4,13 @@ import com.hepsiburada.base.BaseTest;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.security.SecureRandom;
 
 public class BasePage extends BaseTest {
-
-    public BasePage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 
     private static final SecureRandom RANDOM = new SecureRandom();
     private static final long ONE_SECOND = 1000L;
